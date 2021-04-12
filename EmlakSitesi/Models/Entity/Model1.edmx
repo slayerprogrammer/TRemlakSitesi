@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EmlakSitesiDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Deneme">
+          <Key>
+            <PropertyRef Name="denemeID" />
+          </Key>
+          <Property Name="denemeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="denemeAd" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="denemeSoyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GunlukKiralikIlanlar">
+          <Key>
+            <PropertyRef Name="gunlukkiralikilanlarID" />
+          </Key>
+          <Property Name="gunlukkiralikilanlarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ilanbilgileriID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IlanBilgileri">
+          <Key>
+            <PropertyRef Name="ilanbilgileriID" />
+          </Key>
+          <Property Name="ilanbilgileriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Aciklama" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Fiyat" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="YatakSayisi" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="BanyoSayisi" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Metrekare" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Resim" Type="nvarchar" MaxLength="400" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IlanTipleri">
+          <Key>
+            <PropertyRef Name="ilantipleriID" />
+          </Key>
+          <Property Name="ilantipleriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DaireMi" Type="bit" Nullable="false" />
+          <Property Name="RezidansMı" Type="bit" Nullable="false" />
+          <Property Name="VillaMı" Type="bit" Nullable="false" />
+          <Property Name="YazlikMi" Type="bit" Nullable="false" />
+          <Property Name="DukkanYadaMagazaMı" Type="bit" Nullable="false" />
+          <Property Name="OfisMi" Type="bit" Nullable="false" />
+          <Property Name="TarlaMı" Type="bit" Nullable="false" />
+          <Property Name="ZeytinlikMi" Type="bit" Nullable="false" />
+          <Property Name="DevremülkMü" Type="bit" Nullable="false" />
+          <Property Name="OtelMi" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KiralikIlanlar">
+          <Key>
+            <PropertyRef Name="kiralikilanlarID" />
+          </Key>
+          <Property Name="kiralikilanlarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ilanbilgileriID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SatilikIlanlar">
+          <Key>
+            <PropertyRef Name="satilikilanlarID" />
+          </Key>
+          <Property Name="satilikilanlarID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ilanbilgileriID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Uyeler">
+          <Key>
+            <PropertyRef Name="uyeID" />
+          </Key>
+          <Property Name="uyeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SifreTekrar" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EmlakSitesiDBModelStoreContainer">
+          <EntitySet Name="Deneme" EntityType="Self.Deneme" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GunlukKiralikIlanlar" EntityType="Self.GunlukKiralikIlanlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IlanBilgileri" EntityType="Self.IlanBilgileri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IlanTipleri" EntityType="Self.IlanTipleri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KiralikIlanlar" EntityType="Self.KiralikIlanlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SatilikIlanlar" EntityType="Self.SatilikIlanlar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Uyeler" EntityType="Self.Uyeler" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EmlakSitesiDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Deneme">
+          <Key>
+            <PropertyRef Name="denemeID" />
+          </Key>
+          <Property Name="denemeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="denemeAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="denemeSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="GunlukKiralikIlanlar">
+          <Key>
+            <PropertyRef Name="gunlukkiralikilanlarID" />
+          </Key>
+          <Property Name="gunlukkiralikilanlarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ilanbilgileriID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IlanBilgileri">
+          <Key>
+            <PropertyRef Name="ilanbilgileriID" />
+          </Key>
+          <Property Name="ilanbilgileriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Aciklama" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Fiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="YatakSayisi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BanyoSayisi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Metrekare" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Resim" Type="String" MaxLength="400" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IlanTipleri">
+          <Key>
+            <PropertyRef Name="ilantipleriID" />
+          </Key>
+          <Property Name="ilantipleriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DaireMi" Type="Boolean" Nullable="false" />
+          <Property Name="RezidansMı" Type="Boolean" Nullable="false" />
+          <Property Name="VillaMı" Type="Boolean" Nullable="false" />
+          <Property Name="YazlikMi" Type="Boolean" Nullable="false" />
+          <Property Name="DukkanYadaMagazaMı" Type="Boolean" Nullable="false" />
+          <Property Name="OfisMi" Type="Boolean" Nullable="false" />
+          <Property Name="TarlaMı" Type="Boolean" Nullable="false" />
+          <Property Name="ZeytinlikMi" Type="Boolean" Nullable="false" />
+          <Property Name="DevremülkMü" Type="Boolean" Nullable="false" />
+          <Property Name="OtelMi" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="KiralikIlanlar">
+          <Key>
+            <PropertyRef Name="kiralikilanlarID" />
+          </Key>
+          <Property Name="kiralikilanlarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ilanbilgileriID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SatilikIlanlar">
+          <Key>
+            <PropertyRef Name="satilikilanlarID" />
+          </Key>
+          <Property Name="satilikilanlarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ilanbilgileriID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Uyeler">
+          <Key>
+            <PropertyRef Name="uyeID" />
+          </Key>
+          <Property Name="uyeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SifreTekrar" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EmlakSitesiDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Deneme" EntityType="Self.Deneme" />
+          <EntitySet Name="GunlukKiralikIlanlar" EntityType="Self.GunlukKiralikIlanlar" />
+          <EntitySet Name="IlanBilgileri" EntityType="Self.IlanBilgileri" />
+          <EntitySet Name="IlanTipleri" EntityType="Self.IlanTipleri" />
+          <EntitySet Name="KiralikIlanlar" EntityType="Self.KiralikIlanlar" />
+          <EntitySet Name="SatilikIlanlar" EntityType="Self.SatilikIlanlar" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Uyeler" EntityType="Self.Uyeler" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EmlakSitesiDBModelStoreContainer" CdmEntityContainer="EmlakSitesiDBEntities">
+          <EntitySetMapping Name="Deneme">
+            <EntityTypeMapping TypeName="EmlakSitesiDBModel.Deneme">
+              <MappingFragment StoreEntitySet="Deneme">
+                <ScalarProperty Name="denemeID" ColumnName="denemeID" />
+                <ScalarProperty Name="denemeAd" ColumnName="denemeAd" />
+                <ScalarProperty Name="denemeSoyad" ColumnName="denemeSoyad" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GunlukKiralikIlanlar">
+            <EntityTypeMapping TypeName="EmlakSitesiDBModel.GunlukKiralikIlanlar">
+              <MappingFragment StoreEntitySet="GunlukKiralikIlanlar">
+                <ScalarProperty Name="gunlukkiralikilanlarID" ColumnName="gunlukkiralikilanlarID" />
+                <ScalarProperty Name="ilanbilgileriID" ColumnName="ilanbilgileriID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IlanBilgileri">
+            <EntityTypeMapping TypeName="EmlakSitesiDBModel.IlanBilgileri">
+              <MappingFragment StoreEntitySet="IlanBilgileri">
+                <ScalarProperty Name="ilanbilgileriID" ColumnName="ilanbilgileriID" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
+                <ScalarProperty Name="YatakSayisi" ColumnName="YatakSayisi" />
+                <ScalarProperty Name="BanyoSayisi" ColumnName="BanyoSayisi" />
+                <ScalarProperty Name="Metrekare" ColumnName="Metrekare" />
+                <ScalarProperty Name="Resim" ColumnName="Resim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IlanTipleri">
+            <EntityTypeMapping TypeName="EmlakSitesiDBModel.IlanTipleri">
+              <MappingFragment StoreEntitySet="IlanTipleri">
+                <ScalarProperty Name="ilantipleriID" ColumnName="ilantipleriID" />
+                <ScalarProperty Name="DaireMi" ColumnName="DaireMi" />
+                <ScalarProperty Name="RezidansMı" ColumnName="RezidansMı" />
+                <ScalarProperty Name="VillaMı" ColumnName="VillaMı" />
+                <ScalarProperty Name="YazlikMi" ColumnName="YazlikMi" />
+                <ScalarProperty Name="DukkanYadaMagazaMı" ColumnName="DukkanYadaMagazaMı" />
+                <ScalarProperty Name="OfisMi" ColumnName="OfisMi" />
+                <ScalarProperty Name="TarlaMı" ColumnName="TarlaMı" />
+                <ScalarProperty Name="ZeytinlikMi" ColumnName="ZeytinlikMi" />
+                <ScalarProperty Name="DevremülkMü" ColumnName="DevremülkMü" />
+                <ScalarProperty Name="OtelMi" ColumnName="OtelMi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KiralikIlanlar">
+            <EntityTypeMapping TypeName="EmlakSitesiDBModel.KiralikIlanlar">
+              <MappingFragment StoreEntitySet="KiralikIlanlar">
+                <ScalarProperty Name="kiralikilanlarID" ColumnName="kiralikilanlarID" />
+                <ScalarProperty Name="ilanbilgileriID" ColumnName="ilanbilgileriID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SatilikIlanlar">
+            <EntityTypeMapping TypeName="EmlakSitesiDBModel.SatilikIlanlar">
+              <MappingFragment StoreEntitySet="SatilikIlanlar">
+                <ScalarProperty Name="satilikilanlarID" ColumnName="satilikilanlarID" />
+                <ScalarProperty Name="ilanbilgileriID" ColumnName="ilanbilgileriID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="EmlakSitesiDBModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Uyeler">
+            <EntityTypeMapping TypeName="EmlakSitesiDBModel.Uyeler">
+              <MappingFragment StoreEntitySet="Uyeler">
+                <ScalarProperty Name="uyeID" ColumnName="uyeID" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="SifreTekrar" ColumnName="SifreTekrar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

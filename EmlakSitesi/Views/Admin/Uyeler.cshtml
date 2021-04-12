@@ -1,0 +1,34 @@
+﻿@using EmlakSitesi.Entities
+@model List<Uye>
+@{
+    ViewBag.Title = "Uyeler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="col-md-12">
+    <h4>Sisteme Kayıtlı Üyeler Listesi ;</h4><br />
+    <div class="table-responsive m-b-40">
+        <table class="table table-borderless table-data3">
+            <thead>
+                <tr>
+                    <th>Üye Id</th>
+                    <th>Ad Soyad</th>
+                    <th>Email</th>
+                    <th>Şifre</th>
+                    <th>Şifre Tekrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr>
+                        <td>@x.uyeID</td>
+                        <td>@x.AdSoyad</td>
+                        <td>@x.Email</td>
+                        <td>@x.Sifre</td>
+                        <td>@x.SifreTekrar</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

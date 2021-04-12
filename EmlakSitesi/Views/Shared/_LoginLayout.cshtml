@@ -1,0 +1,190 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Evin Olsun</title>
+    <link rel="stylesheet" href="~/Templates/starter/assets/css/style-starter.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <section class="w3l-top-menu-4">
+        <header class="top-menu4">
+            <div class="wrapper">
+                <div class="d-grid align-topmenu4">
+                    <div class="top-menu4-left d-grid align-items-menu4">
+                        <ul class="social-icons">
+                            <li class="facebook"><a href="https://www.facebook.com/Evinolsun-2186228988306644/"><span class="fa fa-facebook"></span></a></li>
+                            <li class="twitter"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+                            <li class="instagram"><a href="#instagram"><span class="fa fa-instagram"></span></a></li>
+                            <li class="google-plus"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+                            <li class="linkedin"><a href="#linkedin"><span class="fa fa-linkedin"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="top-menu4-right">
+                        <ul class="top-menu-right">
+                            <li><a href="tel:+404 11-22-89"> <span class="fa fa-phone"> </span>+(90) 541 790 75 16</a> <span>Whatsap İletişim</span> </li>
+                            <li><a href="mailto:mail@estate.com"> <span class="fa fa-envelope-open-o"> </span>info@evinolsun.com</a> <span>Mail Adresimiz</span> </li>
+                            <li><a> <span class="fa fa-clock-o"> </span>09:00 - 22:00</a> <span>Çalışma Saatlerimiz</span></li>
+                            <li><a> <span class="fa fa-user"> </span></a><span>Hoşgeldiniz</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+    <section class="w3l-header-4">
+        <header id="headers4-block">
+            <div class="wrapper">
+                <div class="d-grid nav-mobile-block header-align">
+                    <div class="logo">
+                        <a class="brand-logo" href="@Url.Action("Index","Home")"><span>evinolsun.com</span></a>
+                    </div>
+                    <input type="checkbox" id="nav" />
+                    <label class="nav" for="nav"></label>
+                    <nav>
+                        <label for="drop" class="toggle">Menu</label>
+                        <input type="button" id="drop">
+                        <ul class="menu">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">Satılık</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Daire", "Daire", "Satilik")</li>
+                                    <li>@Html.ActionLink("Rezidans", "Rezidans", "Satilik")</li>
+                                    <li>@Html.ActionLink("Villa", "Villa", "Satilik")</li>
+                                    <li>@Html.ActionLink("Yazlık", "Yazlik", "Satilik")</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">Kiralık</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        @Html.ActionLink("Daire", "Daire", "Kiralik")
+                                        @Html.ActionLink("Rezidans", "Rezidans", "Kiralik")
+                                        @Html.ActionLink("Villa", "Villa", "Kiralik")
+                                        @Html.ActionLink("Yazlık", "Yazlik", "Kiralik")
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">Günlük Kiralık</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Daire", "Daire", "GunlukKiralik")</li>
+                                    <li>@Html.ActionLink("Rezidans", "Rezidans", "GunlukKiralik")</li>
+                                    <li>@Html.ActionLink("Villa", "Villa", "GunlukKiralik")</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">Projeler</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Konut Projeleri", "KonutProjeleri", "Projeler")</li>
+                                    <li> @Html.ActionLink("Toki Projeleri", "TokiProjeleri", "Projeler")</li>
+                                    <li>@Html.ActionLink("Emlak Konut Projeleri", "EmlakKonutProjeleri", "Projeler")</li>
+                                </ul>
+                            </li>
+                            <li>@Html.ActionLink("Emlak Haberleri", "Index", "EmlakHaberleri")</li>
+                            <li>@Html.ActionLink("İletişim", "Index", "İletisim")</li>
+                            <li style="border:solid;border-color:lightblue;background-color:lightblue"><b>@Html.ActionLink("İlan Ver", "Index", "UyeOl")</b></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </section>
+    @RenderBody()
+    <script src="~/Templates/starter/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Templates/starter/assets/js/owl.carousel.js"></script>
+    <section class="w3l-footer-29-main">
+        <div class="footer-29">
+            <div class="wrapper">
+                <div class="d-grid grid-col-4 footer-top-29">
+                    <div class="footer-list-29 footer-1">
+                        <h6 class="footer-title-29">Bize Ulaşın</h6>
+                        <ul>
+                            <li><p><span class="fa fa-map-marker"></span>Yakuplu - Beylikdüzü / İSTANBUL</p></li>
+                            <li><a href="tel:+7-800-999-800"><span class="fa fa-phone"></span> +(21)-255-999-8888</a></li>
+                            <li><a href="mailto:estate-mail@support.com" class="mail"><span class="fa fa-envelope-open-o"></span> mail@emlak.com</a></li>
+                        </ul>
+                        <div class="main-social-footer-29">
+                            <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+                            <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
+                            <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+                            <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
+                            <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
+                        </div>
+                    </div>
+                    <div class="footer-list-29 footer-2">
+                        <ul>
+                            <h6 class="footer-title-29">Kategoriler</h6>
+                            <li><a href="#link">Satılıklar (15)</a></li>
+                            <li><a href="#link">Kiralıklar (120)</a></li>
+                            <li><a href="#link">Günlük Kiralıklar (19)</a></li>
+                            <li><a href="#link">Daireler (04)</a></li>
+                            <li><a href="#link">Villalar (5)</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-list-29 footer-3">
+                        <div class="properties">
+                            <h6 class="footer-title-29">Son İlanlar</h6>
+                            <a href="#blog-single"><img src="~/Templates/starter/assets/images/blog-3.jpg" class="img-responsive" alt="" /><p>Park avenue apartment for sale<span>$210</span></p></a>
+                            <a href="#blog-single"><img src="~/Templates/starter/assets/images/blog-2.jpg" class="img-responsive" alt="" /><p>Luxury Villa for rent<span>$450</span></p></a>
+                            <a href="#blog-single"><img src="~/Templates/starter/assets/images/blog-4.jpg" class="img-responsive" alt="" /><p>Apartment for sale<span>$210</span></p></a>
+                        </div>
+                    </div>
+                    <div class="footer-list-29 footer-4">
+                        <ul>
+                            <h6 class="footer-title-29">Hızlı Linkler</h6>
+                            <li><a href="about.html">Şirket Hakkında</a></li>
+                            <li><a href="#featured">Öne Çıkan Özellikler</a></li>
+                            <li><a href="#team">Professional Agents</a></li>
+                            <li><a href="#blog">Properties Blog</a></li>
+                            <li><a href="contact.html">Get in touch</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-grid grid-col-2 bottom-copies">
+                    <p class="copy-footer-29">© 2019 Tenant. All rights reserved | Designed by <a href="https://w3layouts.com">W3layouts</a></p>
+                    <ul class="list-btm-29">
+                        <li><a href="#link">Privacy policy</a></li>
+                        <li><a href="#link">Terms of service</a></li>
+                        <li>
+                            <select name="carlist" form="carform">
+                                <option value="Language">Language</option>
+                                <option value="Language">Language 1</option>
+                                <option value="Language">Language 2</option>
+                                <option value="Language">Language 3</option>
+                            </select>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-angle-up"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }</script>
+</body>
+</html>

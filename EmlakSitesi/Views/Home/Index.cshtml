@@ -1,0 +1,420 @@
+﻿@model EmlakSitesi.Models.Anasayfa.AnasayfaViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<body>
+    <section class="w3l-covers-4">
+        <div id="covers4-block">
+            <div class="main-slider">
+                <div class="csslider infinity" id="slider1">
+                    <input type="radio" name="slides" checked="checked" id="slides_1" />
+                    <input type="radio" name="slides" id="slides_2" />
+                    <input type="radio" name="slides" id="slides_3" />
+                    <input type="radio" name="slides" id="slides_4" />
+                    <ul>
+                        <li class="slider-bg-1">
+                            <div class="slider-info-wrapper">
+                                <div class="slider-info">
+                                    <div class="d-grid slide-two-col">
+                                        <div class="slide-left-text">
+                                            <h3>Harika evler bulalım</h3>
+                                            <h3><span>100.000 TL'den başlayan fiyatlarla</span></h3>
+                                            <p>
+                                                Birbirinden konforlu, bahçeli, metroya yakın evler uygun fiyatlarla sizlerle. Bize ulaşın hemen gelip sizlere evleri gezdirelim.
+                                            </p>
+                                            @*<a href="about.html" class="btn button-style">Devamını Oku</a>*@
+                                            @*<a href="Index.cshtml" class="btn button-style1">Bize Ulaşın</a>*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slider-bg-2">
+                            <div class="slider-info-wrapper">
+                                <div class="slider-info">
+                                    <div class="d-grid slide-two-col">
+                                        <div class="slide-left-text">
+                                            <h3>Kurumsal firmalara kiralık daireler</h3>
+                                            <h3><span>Aylık 2000₺'den başlayan fiyatlarla</span></h3>
+                                            <p>
+                                                Şubeleri bulunan orta ve büyük ölçekli firmalara veya küçük işletmelere uygun ödeme kolaylığı ile kiralık daireler.
+                                            </p>
+                                            @*<a href="about.html" class="btn button-style">Devamını Oku</a>
+                                                <a href="contact.html" class="btn button-style1">Bize Ulaşın</a>*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slider-bg-3">
+                            <div class="slider-info-wrapper">
+                                <div class="slider-info">
+                                    <div class="d-grid slide-two-col">
+                                        <div class="slide-left-text">
+                                            <h3>Kiralık villalar</h3>
+                                            <h3><span>1000₺'den başlayan fiyatlarla</span></h3>
+                                            <p>
+                                                Deniz manzaralı, havuzlu, spor salonlu villalarda oturmak ister misiniz? O halde bize ulaşın.
+                                            </p>
+                                            @*<a href="about.html" class="btn button-style">Devamını Oku</a>
+                                                <a href="contact.html" class="btn button-style1">Bize Ulaşın</a>*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="arrows">
+                        <label for="slides_1"></label>
+                        <label for="slides_2"></label>
+                        <label for="slides_3"></label>
+                    </div>
+                    <div class="navigation">
+                        <div>
+                            <label for="slides_1"></label>
+                            <label for="slides_2"></label>
+                            <label for="slides_3"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w3l-feature-8">
+        <div class="features-main">
+            <div class="wrapper">
+                <div class="features">
+                    <div class="feature-1">
+                        <div class="feature-body">
+                            <div class="feature-images">
+                                <span class="fa fa-rebel"></span>
+                            </div>
+                            <div class="feature-info">
+                                <a href="#property">
+                                    <h3 class="feature-titel">Misyonumuz</h3>
+                                </a>
+                                <p class="feature-text">
+                                    Gayrimenkul sektöründe, müşterilerimizin beklenti ve  ihtiyaçlarına uygun çözümler üretip pazarlama, satış kiralama ve  sonrasında koşulsuz  müşteri memnuniyeti bilinciyle,  hızlı ve güvenilir hizmetler sunmak amacındayız.
+                                </p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-2">
+                        <div class="feature-body">
+                            <div class="feature-images">
+                                <span class="fa fa-line-chart"></span>
+                            </div>
+                            <div class="feature-info">
+                                <a href="#property">
+                                    <h3 class="feature-titel">Vizyonumuz</h3>
+                                    <p class="feature-text">
+                                        Evin Olsun Emlak faaliyet gösterdiği emlak sektöründe doğruluk, dürüstlük ve güvenilirlik ilkelerinden ödün vermeden çalışmalarına devam ederek, hizmet verdiği bölgelerde değerlerini koruyarak örnek ve lider şirket olma vizyonunu taşımaktadır.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feature-3">
+                        <div class="feature-body">
+                            <div class="feature-images">
+                                <span class="fa fa-rocket"></span>
+                            </div>
+                            <div class="feature-info">
+                                <a href="#property">
+                                    <h3 class="feature-titel">Memnuniyet</h3>
+                                    <p class="feature-text">
+                                        Çalışma ilkelerimiz gereği, yoğun ve sürümü yüksek bir rutin değil, doğru müşteriye doğru emlak, doğru fiyat ve yüksek memnuniyet üzerine odaklanmaktayız.
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w3l-grids-4">
+        <div id="grids4-block">
+            <div class="wrapper">
+                <h3 class="heading-title">Satılık Ev İlanları</h3>
+                <div class="owl-carousel owl-theme">
+                    @foreach (var x in Model.satilikDaire)
+                    {
+                        <div class="item">
+                            <div class="grids4-info">
+                                <a href="#properties-single"><img src="@x.Resim" style="width:325px; height:200px" alt="" /></a>
+                                <div class="info-bg">
+                                    <h5><a href="#properties-single">@x.Baslik</a></h5>
+                                    <span class="price">@x.Fiyat</span>
+                                    <p>@x.Aciklama</p>
+                                    <ul>
+                                        <li><span class="fa fa-bed"></span>@x.YatakSayisi</li>
+                                        <li><span class="fa fa-bath"></span>@x.BanyoSayisi</li>
+                                        <li><span class="fa fa-share-square-o"></span>@x.Metrekare m²</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w3l-grids-4">
+        <div id="grids4-block">
+            <div class="wrapper">
+                <h3 class="heading-title">Kiralık Ev İlanları</h3>
+                <div class="owl-carousel owl-theme">
+                    @foreach (var x in Model.kiralikDaire)
+                    {
+                        <div class="item">
+                            <div class="grids4-info">
+                                <a href="#properties-single"><img src="@x.Resim" style="width:325px; height:200px" alt="" /></a>
+                                <div class="info-bg">
+                                    <h5><a href="#properties-single">@x.Baslik</a></h5>
+                                    <span class="price">@x.Fiyat</span>
+                                    <p>@x.Aciklama</p>
+                                    <ul>
+                                        <li><span class="fa fa-bed"></span>@x.YatakSayisi</li>
+                                        <li><span class="fa fa-bath"></span>@x.BanyoSayisi</li>
+                                        <li><span class="fa fa-share-square-o"></span>@x.Metrekare m²</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/Templates/starter/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Templates/starter/assets/js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 2,
+                        nav: false,
+                        margin: 20
+                    },
+                    1000: {
+                        items: 3,
+                        nav: true,
+                        loop: true,
+                        margin: 20
+                    }
+                }
+            })
+        })
+    </script>
+    <div class="w3l-products-4">
+        <div id="products4-block" class="text-center">
+            <h3 class="heading-title">Projeler</h3>
+            <div class="wrapper">
+                <input id="tab1" type="radio" name="tabs" checked>
+                <label class="tabtle" for="tab1">Konut Projeleri</label>
+                <input id="tab2" type="radio" name="tabs">
+                <label class="tabtle" for="tab2">Emlak Konut Projeleri</label>
+                <input id="tab3" type="radio" name="tabs">
+                <label class="tabtle" for="tab3">Toki Projeleri</label>
+                <section id="content1" class="tab-content text-left">
+                    <div class="owl-carousel owl-theme">
+                        @foreach (var x in Model.projeKonut)
+                        {
+                            <div class="item">
+                                <div class="grids4-info">
+                                    <a href="#properties-single"><img src="@x.Resim" style="width:325px; height:200px" alt="" /></a>
+                                    <div class="info-bg">
+                                        <h5><a href="#properties-single">@x.Baslik</a></h5>
+                                        <span class="price">@x.Fiyat</span>
+                                        <p>@x.Aciklama</p>
+                                        <p>
+                                            Proje Başlangıç Tarihi: @x.ProjeBaslangicTarihi
+                                            Proje Teslim Tarihi: @x.TeslimTarihi
+                                            Proje Tamamlanma Oranı: @x.ProjeTamamlanmaOrani
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+                <section id="content2" class="tab-content text-left">
+                    <div class="owl-carousel owl-theme">
+                        @foreach (var x in Model.projeEmlakKonut)
+                        {
+                            <div class="item">
+                                <div class="grids4-info">
+                                    <a href="#properties-single"><img src="@x.Resim" style="width:325px; height:200px" alt="" /></a>
+                                    <div class="info-bg">
+                                        <h5><a href="#properties-single">@x.Baslik</a></h5>
+                                        <span class="price">@x.Fiyat</span>
+                                        <p>@x.Aciklama</p>
+                                        <p>
+                                            Proje Başlangıç Tarihi: @x.ProjeBaslangicTarihi
+                                            Proje Teslim Tarihi: @x.TeslimTarihi
+                                            Proje Tamamlanma Oranı: @x.ProjeTamamlanmaOrani
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+                <section id="content3" class="tab-content text-left">
+                    <div class="owl-carousel owl-theme">
+                        @foreach (var x in Model.projeToki)
+                        {
+                            <div class="item">
+                                <div class="grids4-info">
+                                    <a href="#properties-single"><img src="@x.Resim" style="width:325px; height:200px" alt="" /></a>
+                                    <div class="info-bg">
+                                        <h5><a href="#properties-single">@x.Baslik</a></h5>
+                                        <span class="price">@x.Fiyat</span>
+                                        <p>@x.Aciklama</p>
+                                        <p>
+                                            Proje Başlangıç Tarihi: @x.ProjeBaslangicTarihi
+                                            Proje Teslim Tarihi: @x.TeslimTarihi
+                                            Proje Tamamlanma Oranı: @x.ProjeTamamlanmaOrani
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <section class="w3l-grids-4">
+        <div id="grids4-block">
+            <div class="wrapper">
+                <h3 class="heading-title">Emlak Haberleri</h3>
+                <div class="owl-carousel owl-theme">
+                    @foreach (var x in Model.emlakHaber)
+                    {
+                        <div class="item">
+                            <div class="grids4-info">
+                                <a href="#properties-single"><img src="@x.Resim" style="width:325px; height:200px" alt="" /></a>
+                                <div class="info-bg">
+                                    <h5><a href="#properties-single">@x.Baslik</a></h5>
+                                    <span class="price">@x.Tarih</span>
+                                    <p>@x.Aciklama</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w3l-companies-hny-6">
+        <!-- /grids -->
+        <div class="companies-layout">
+            <div class="wrapper">
+                <h3 class="heading-title">Müşterilerimiz</h3>
+                <div class="grid grid-column-5">
+
+                    <div class="column">
+                        <div class="company-gd">
+                            <a href="#client"><img class="img-responsive" src="~/Templates/starter/assets/images/client1.png" alt="client"> </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="company-gd">
+                            <a href="#client"><img class="img-responsive" src="~/Templates/starter/assets/images/client2.png" alt="client"> </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="company-gd">
+                            <a href="#client"><img class="img-responsive" src="~/Templates/starter/assets/images/client3.png" alt="client"> </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="company-gd">
+                            <a href="#client"><img class="img-responsive" src="~/Templates/starter/assets/images/client4.png" alt="client"> </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="company-gd">
+                            <a href="#client"><img class="img-responsive" src="~/Templates/starter/assets/images/client5.png" alt="client"> </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="company-gd">
+                            <a href="#client"><img class="img-responsive" src="~/Templates/starter/assets/images/client6.png" alt="client"> </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="company-gd">
+                            <a href="#client"><img class="img-responsive" src="~/Templates/starter/assets/images/client1.png" alt="client"> </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="company-gd">
+                            <a href="#client"><img class="img-responsive" src="~/Templates/starter/assets/images/client2.png" alt="client"> </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="company-gd">
+                            <a href="#"><img class="img-responsive" src="~/Templates/starter/assets/images/client3.png" alt="client"> </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="company-gd">
+                            <a href="#client"><img class="img-responsive" src="~/Templates/starter/assets/images/client4.png" alt="client"> </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- //grids -->
+    </section>
+    <section class="w3l-subscribe-1">
+        <div class="wrapper">
+            <h4>Özel Fırsatlar İçin Üye Olun</h4>
+            <h3 class="heading-title">En Son Haberleri Alın</h3>
+            <div class="form">
+                <form action="#" method="post" class="subscribe-form">
+                    <input type="email" name="email" placeholder="Email adresinizi giriniz" required>
+                    <button class="btn">Abone Olun</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-angle-up"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

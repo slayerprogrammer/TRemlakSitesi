@@ -1,0 +1,61 @@
+﻿@using EmlakSitesi.Entities.Projeler
+@model List<ProjeToki>
+@{
+    ViewBag.Title = "TokiProjeleri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="col-md-12">
+    <!-- DATA TABLE -->
+    <h3 class="title-5 m-b-35">Toki Projeleri Listesi</h3>
+    <div class="table-data__tool">
+        <div class="table-data__tool-right">
+            <button class="au-btn au-btn-icon au-btn--green au-btn--small">
+                <i class="zmdi zmdi-plus"></i>İlan Ekle
+            </button>
+            @*<button class="au-btn au-btn-icon au-btn--blue au-btn--small">
+                    <i class="zmdi zmdi-minus"></i>İlan Sil
+                </button>*@
+        </div>
+    </div>
+    <div class="table-responsive table-responsive-data2">
+        <table class="table table-data2">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Başlık</th>
+                    <th>Açıklama</th>
+                    <th>Fiyat</th>
+                    <th>Daire Sayisi</th>
+                    <th>Proje Baslangıç Tarihi</th>
+                    <th>Teslim Tarihi</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                    <tr class="tr-shadow">
+                        <td>@x.projelertoki_ID</td>
+                        <td>@x.Baslik</td>
+                        <td>sfd</td>
+                        <td>@x.Fiyat</td>
+                        <td>@x.DaireSayisi</td>
+                        <td>@x.ProjeBaslangicTarihi</td>
+                        <td>@x.TeslimTarihi</td>
+                        <td>
+                            <div class="table-data-feature">
+                                <button class="item" data-toggle="tooltip" data-placement="top" title="Düzenle">
+                                    <i class="zmdi zmdi-edit"></i>
+                                </button>
+                                <button class="item" data-toggle="tooltip" data-placement="top" title="Sil">
+                                    <i class="zmdi zmdi-delete"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="spacer"></tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

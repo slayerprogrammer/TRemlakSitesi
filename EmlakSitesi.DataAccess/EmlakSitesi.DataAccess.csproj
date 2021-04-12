@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D011358-42DA-4667-AAA7-ED15AF9CE259}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EmlakSitesi.DataAccess</RootNamespace>
+    <AssemblyName>EmlakSitesi.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\DevFramework.Core\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\EmlakHaberleri\IEmlakHaberDal.cs" />
+    <Compile Include="Abstract\GunlukKiralik\IGunlukKiralikDaireDal.cs" />
+    <Compile Include="Abstract\GunlukKiralik\IGunlukKiralikRezidansDal.cs" />
+    <Compile Include="Abstract\GunlukKiralik\IGunlukKiralikVillaDal.cs" />
+    <Compile Include="Abstract\IAdminDal.cs" />
+    <Compile Include="Abstract\IIlanBilgileriDal.cs" />
+    <Compile Include="Abstract\Kiralik\IKiralikDaireDal.cs" />
+    <Compile Include="Abstract\Kiralik\IKiralikRezidansDal.cs" />
+    <Compile Include="Abstract\Kiralik\IKiralikVillaDal.cs" />
+    <Compile Include="Abstract\Kiralik\IKiralikYazlikDal.cs" />
+    <Compile Include="Abstract\Projeler\IProjeEmlakKonutDal.cs" />
+    <Compile Include="Abstract\Projeler\IProjeKonutDal.cs" />
+    <Compile Include="Abstract\Projeler\IProjeTokiDal.cs" />
+    <Compile Include="Abstract\Satilik\ISatilikDaireDal.cs" />
+    <Compile Include="Abstract\IUyeDal.cs" />
+    <Compile Include="Abstract\Satilik\ISatilikRezidansDal.cs" />
+    <Compile Include="Abstract\Satilik\ISatilikVillaDal.cs" />
+    <Compile Include="Abstract\Satilik\ISatilikYazlikDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfAdminDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfIlanBilgileriDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EmlakHaberleri\EfEmlakHaberDal.cs" />
+    <Compile Include="Concrete\EntityFramework\GunlukKiralik\EfGunlukKiralikDaireDal.cs" />
+    <Compile Include="Concrete\EntityFramework\GunlukKiralik\EfGunlukKiralikRezidansDal.cs" />
+    <Compile Include="Concrete\EntityFramework\GunlukKiralik\EfGunlukKiralikVillaDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Kiralik\EfKiralikDaireDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Kiralik\EfKiralikRezidansDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Kiralik\EfKiralikVillaDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Kiralik\EfKiralikYazlikDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\AdminMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\EmlakHaberleri\EmlakHaberMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\GunlukKiralik\GunlukKiralikDaireMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\GunlukKiralik\GunlukKiralikRezidansMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\GunlukKiralik\GunlukKiralikVillaMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Kiralik\KiralikDaireMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Kiralik\KiralikRezidansMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Kiralik\KiralikVillaMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Kiralik\KiralikYazlikMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Projeler\ProjeEmlakKonutMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Projeler\ProjeKonutMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Projeler\ProjeTokiMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Satilik\SatilikRezidansMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Satilik\SatilikVillaMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Satilik\SatilikYazlikMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Projeler\EfProjeEmlakKonutDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Projeler\EfProjeKonutDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Projeler\EfProjeTokiDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Satilik\EfSatilikDaireDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUyeDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EmlakSitesiContext.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\IlanBilgileriMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\Satilik\SatilikDaireMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Mappings\UyeMap.cs" />
+    <Compile Include="Concrete\EntityFramework\Satilik\EfSatilikRezidansDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Satilik\EfSatilikVillaDal.cs" />
+    <Compile Include="Concrete\EntityFramework\Satilik\EfSatilikYazlikDal.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevFramework.Core\DevFramework.Core.csproj">
+      <Project>{93C91DD3-067E-4806-A7FF-F8F9B3E570D7}</Project>
+      <Name>DevFramework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmlakSitesi.Entities\EmlakSitesi.Entities.csproj">
+      <Project>{77C2E25A-D114-45FD-AC38-E1EBA4E58CEB}</Project>
+      <Name>EmlakSitesi.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

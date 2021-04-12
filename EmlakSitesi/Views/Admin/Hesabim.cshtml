@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Hesabim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="col-md-12">
+        <h3>Hesap Ayarları</h3><br />
+        <div class="container">
+            <form action="https://www.w3schools.com/action_page.php">
+                <label for="fname">Ad Soyad</label>
+                <input type="text" id="fname" name="firstname" placeholder="First and last name">
+
+                <label for="lname">Email</label>
+                <input type="text" id="lname" name="lastname" placeholder="example@gmail.com">
+
+                <label for="lname">Şifre</label>
+                <input type="text" id="lname" name="lastname" placeholder="Password">
+
+                <label for="lname">Şifre Tekrar</label>
+                <input type="text" id="lname" name="lastname" placeholder="Password again">
+
+                <input type="submit" value="Kaydet">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

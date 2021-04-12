@@ -1,0 +1,89 @@
+﻿@model EmlakSitesi.Models.GunlukKiralik.GunlukKiralikRezidansViewModel
+@{
+    ViewBag.Title = "Rezidans";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<body>
+    <script src="~/Templates/starter/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Templates/starter/assets/js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 0,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: true
+                    },
+                    600: {
+                        items: 2,
+                        nav: false,
+                        margin: 20
+                    },
+                    1000: {
+                        items: 3,
+                        nav: true,
+                        loop: true,
+                        margin: 20
+                    }
+                }
+            })
+        })
+    </script>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-angle-up"></span>
+    </button>
+    <section class="w3l-breadcrumns">
+        <div class="wrapper">
+            <ul>
+                <li>Gunluk Kiralik<span class="fa fa-angle-double-right"></span></li>
+                <li>Konut<span class="fa fa-angle-double-right"></span></li>
+                <li>Rezidans İlanları</li>
+            </ul>
+        </div>
+    </section>
+    <div class="w3l-products-4">
+        <br />
+        <div class="wrapper">
+            <section>
+                <div class="d-grid grid-col-3">
+                    @foreach (var x in Model.gunlukKiralikRezidans)
+                    {
+                        <div class="product">
+                            <a href="#properties-single"><img src="@x.Resim" style="width:350px;height:225px" class="img-responsive" alt="" /></a>
+                            <div class="info-bg">
+                                <h4><a href="#">@x.Baslik</a></h4>
+                                <span class="price">@x.Fiyat</span>
+                                <p>@x.Aciklama</p>
+                                <ul>
+                                    <li><span class="fa fa-bed"></span>@x.YatakSayisi</li>
+                                    <li><span class="fa fa-bath"></span>@x.BanyoSayisi</li>
+                                    <li><span class="fa fa-share-square-o"></span>@x.Metrekare m²</li>
+                                </ul>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

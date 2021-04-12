@@ -1,0 +1,77 @@
+﻿@model EmlakSitesi.Models.Anasayfa.AnasayfaViewModel
+@{
+    ViewBag.Title = "IlanVer";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Example</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Anasayfa", "Index", "Profilim")</li>
+                <li>@Html.ActionLink("İlan Ver", "IlanVer", "Profilim")</li>
+                <li>@Html.ActionLink("Mesajlarim", "Mesajlar", "Profilim")</li>
+                <li>@Html.ActionLink("Profilim", "Profil", "Profilim")</li>
+                <li>@Html.ActionLink("Favorilerim", "Favoriler", "Profilim")</li>
+            </ul>
+        </div>
+    </nav>
+    <section class="w3l-breadcrumns">
+        <div class="wrapper">
+            <ul>
+                <li>Anasayfa<span class="fa fa-angle-double-right"></span></li>
+                <li>İlan Ver</li>
+            </ul>
+        </div>
+    </section>
+    <div class="container">
+        <h4>İlan özelliklerini giriniz...</h4>
+        <form action="">
+            <div class="form-group">
+                <label for="email">Başlık</label>
+                <input type="email" class="form-control" id="email" placeholder="İlan başlığı" name="email">
+            </div>
+            <div class="form-group">
+                <label for="email">Açıklama</label>
+                <input type="email" class="form-control" id="email" placeholder="İlan açıklaması" name="email">
+            </div>
+            <div class="form-group">
+                <label for="email">Fiyat</label>
+                <input type="email" class="form-control" id="email" placeholder="İlan fiyatı" name="email">
+            </div>
+            <div class="form-group">
+                <label for="email">Banyo Sayısı</label>
+                <input type="email" class="form-control" id="email" placeholder="İlan banyo sayısı" name="email">
+            </div>
+            <div class="form-group">
+                <label for="email">Yatak Sayısı</label>
+                <input type="email" class="form-control" id="email" placeholder="İlan yatak sayısı" name="email">
+            </div>
+            <div class="form-group">
+                <label for="email">Metrekare</label>
+                <input type="email" class="form-control" id="email" placeholder="İlan metrekaresi" name="email">
+            </div>
+            <button type="submit" class="btn btn-success">Kaydet</button>
+        </form>
+        <br />
+    </div>
+
+</body>
+</html>
